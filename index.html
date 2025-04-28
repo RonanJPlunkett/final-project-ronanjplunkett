@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HelpHub Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>HelpHub Homepage</h1>
+        <p>Connecting volunteers with local charities in their area.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="charities.html">Charities List</a></li>
+            <li><a href="charity_profile.html">Charity Profile</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <main>
+            <h2>Welcome!</h2>
+            <p> HelpHub is a company that works with people like you who want to volunteer. We connect you with local charities in your area.</p>
+
+            <div class="picture-box">
+                <img src="https://images.squarespace-cdn.com/content/v1/572a009bcf80a146d278c799/1605562013740-LAEE0JXI9FWZ5XMG8HZR/ShareCLTPic.jpg?format=1500w" alt="Volunteer 1">
+                <p>Holy Angels</p>
+            </div>
+
+            <p>Nurse playing with a Holy Angels child.</p>
+
+            <div class="picture-box">
+                <img src="https://images.contentstack.io/v3/assets/bltefdd0b53724fa2ce/blt1f0360a1ffe58eee/5dade82fdc674266df3d4fb6/Ronald_McDonald_Statue.jpeg" alt="Volunteer 2">
+                <p>Ronald McDonald House Charities</p>
+            </div>
+
+            <p>Volunteers working with the Ronald McDonald House Charities.</p>
+        </main>
+    </div>
+
+    <h2>Check Your Charity EIN:</h2>
+    <div id="output"></div>
+  
+    <script>
+      const ein = 'your_ein_here';
+      const apiKey = 'apikeyhere';
+      const url = `https://api.charityapi.org/api/public_charity_check/${ein}`;
+
+      function fetchCharityData() {
+        fetch(url, {
+          method: 'GET',
+          headers: {
+            'apikey': apiKey
+          }
+        })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then(data => {
+            document.getElementById('output').innerHTML = JSON.stringify(data, null, 2);
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+            document.getElementById('output').innerHTML = `Error fetching data: ${error.message}`;
+          });
+      }
+  
+      fetchCharityData();
+    </script>
+
+    <footer></footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+header, nav, footer {
+    background-color: #0b88b9;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+#container {
+    padding: 20px;
+}
+
+.picture-box {
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.picture-box:hover {
+    transform: scale(1.05);
+    border-color: #333;
+}
+
+.picture-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.charity-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.charity-logo {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd;
+    border: 1px solid #999;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #555;
+}
+
+.charity-name {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.charity-description {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 12px;
+    max-width: 500px;
+}
+
+.volunteer-button {
+    padding: 10px 20px;
+    background-color: #0b88b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.volunteer-button:hover {
+    background-color: #0b88b9;
+}
+
+.tooltip {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+footer {
+    background-color: #0b88b9;
+    text-align: center;
+    padding: 20px;
+}

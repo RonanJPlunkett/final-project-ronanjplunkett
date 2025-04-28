@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HelpHub Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        .volunteer-form {
+            display: none;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .volunteer-form input, .volunteer-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .volunteer-form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .volunteer-form button:hover {
+            background-color: #45a049;
+        }
+
+        .charity-logo img {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HelpHub Charity Profile</h1>
+        <p>Connecting volunteers with local charities in their area.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="charities.html">Charities List</a></li>
+            <li><a href="charity_profile.html">Charity Profile</a></li>
+        </ul>
+    </nav>
+
+    <div id="container">
+        <main>
+            <h2>Charity Profiles</h2>
+            <p>HelpHub works with these charities to give back to their communities.</p>
+
+            <div class="charity-item" data-name="Holy Angels" data-details="Holy Angels provides compassionate care for individuals with intellectual and developmental disabilities.">
+                <div class="charity-logo">
+                    <img src="https://images.squarespace-cdn.com/content/v1/572a009bcf80a146d278c799/1499465067971-PBEK5GAI71FGWHSAPX4J/HeartASymbol.jpg" alt="Holy Angels Logo">
+                </div>
+                <span class="charity-name">Holy Angels</span>
+                <p class="charity-description">The Holy Angels mission is to provide compassionate, dependable care and opportunities for high-quality living to those with intellectual developmental disabilities and delicate medical conditions through physical, social, spiritual, educational, vocational and emotional support.</p>
+                <a class="volunteer-button" href="#" onclick="showVolunteerForm('Holy Angels')">Volunteer</a>
+                <div class="volunteer-form" id="volunteer-form-Holy Angels">
+                    <h3>Volunteer for Holy Angels</h3>
+                    <form>
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message (optional):</label>
+                        <textarea id="message" name="message"></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="charity-item">
+                <div class="charity-logo">
+                    <img src="https://rmhcozarks.org/wp-content/uploads/2016/12/rmhc-logo-icon-02-300x300.png" alt="RMHC Logo">
+                </div>
+                <span class="charity-name">Ronald McDonald House Charities</span>
+                <p class="charity-description">RMHC provides essential services that remove barriers, strengthen families, and promote healing when children need healthcare.</p>
+                <a class="volunteer-button" href="#" onclick="showVolunteerForm('Ronald McDonald House Charities')">Volunteer</a>
+                <div class="volunteer-form" id="volunteer-form-Ronald McDonald House Charities">
+                    <h3>Volunteer for Ronald McDonald House Charities</h3>
+                    <form>
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message (optional):</label>
+                        <textarea id="message" name="message"></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="charity-item">
+                <div class="charity-logo">
+                    <img src="https://belmontcommunitycenter.org/wp-content/uploads/2024/03/BCC-Organization-logo.png" alt="Belmont Community Organization Logo">
+                </div>
+                <span class="charity-name">Belmont Community Organization</span>
+                <p class="charity-description">Serving the Belmont area, this organization provides food, clothing, and financial aid to local families in need through community support and donations.</p>
+                <a class="volunteer-button" href="#" onclick="showVolunteerForm('Belmont Community Organization')">Volunteer</a>
+                <div class="volunteer-form" id="volunteer-form-Belmont Community Organization">
+                    <h3>Volunteer for Belmont Community Organization</h3>
+                    <form>
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message (optional):</label>
+                        <textarea id="message" name="message"></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="charity-item">
+                <div class="charity-logo">
+                    <img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/092010/american_red_cross_stacked.jpeg?itok=w1Vg_uCk" alt="American Red Cross Logo">
+                </div>
+                <span class="charity-name">American Red Cross</span>
+                <p class="charity-description">The American Red Cross delivers vital services—from disaster relief to blood donations—thanks to the power of volunteers and the generosity of donors.</p>
+                <a class="volunteer-button" href="#" onclick="showVolunteerForm('American Red Cross')">Volunteer</a>
+                <div class="volunteer-form" id="volunteer-form-American Red Cross">
+                    <h3>Volunteer for American Red Cross</h3>
+                    <form>
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message (optional):</label>
+                        <textarea id="message" name="message"></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer></footer>
+
+    <script>
+        function showVolunteerForm(charityName) {
+            const allForms = document.querySelectorAll('.volunteer-form');
+            allForms.forEach(form => form.style.display = 'none');
+
+            const form = document.getElementById(`volunteer-form-${charityName}`);
+            if (form) {
+                form.style.display = 'block';
+            }
+        }
+    </script>
+
+    <script src="charity_profile.js"></script>
+</body>
+</html>
